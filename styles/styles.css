@@ -2,7 +2,7 @@
 
 :root{
   --text-color:rgb(30,30,30);
-  --back-color:rgb(225,225,225);  
+  --back-color:rgb(225,225,225);
 }
 
 /* in theory - this should only apply if the user has the
@@ -24,6 +24,8 @@ scheme for it */
     }
 }
 
+
+
 html{
     /* for easy math for fonts... */
     font-size:10px;
@@ -41,4 +43,46 @@ h3{
 
 p{
     font-size:1.6em;
+    color:azure;
+    background:darkblue;
+}
+
+a{
+    color:chartreuse;
+}
+
+a:hover{
+    color:bisque;
+}
+
+@media (hover:none){
+    /* if the device does not support a hover state... */
+    a{
+        border:3px solid bisque;
+    }
+
+    a:active{
+        background-color:brown;
+    }
+}
+
+@media print{
+    /* styles specifically for printers */
+    p{
+        background:none;
+        color:black;
+    }
+}
+
+/* you can set media queries with ems or rems, so they 
+will respond to changes in font size */
+@media screen and (min-width:76rem){
+
+    h1{
+        font-size:5em;
+    }
+
+    h3{
+        font-size:2.4em;
+    }
 }
