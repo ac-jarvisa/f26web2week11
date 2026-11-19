@@ -45,6 +45,24 @@ p{
     font-size:1.6em;
     color:azure;
     background:darkblue;
+
+    padding:40px;
+    border-radius: 50px;
+}
+
+@supports (corner-shape: bevel){
+    p{
+        border-radius:40px;
+        corner-shape: notch bevel squircle round;
+    }
+}
+
+/* check to see if something does not support and apply styles
+accordingly */
+@supports not (corner-shape: bevel){
+    p{
+        background:red;
+    }
 }
 
 a{
